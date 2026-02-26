@@ -15,6 +15,7 @@ import reportWebVitals from './reportWebVitals';
 // import Page from './LanguageSwitcher/Page';
 // import FormValidationBeginner from './tps/FormValidation/FormValidationBeginner';
 import FormValidation from './tps/FormValidation/FormValidation';
+import App from './Router/App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // const fruitsArray = [
@@ -26,7 +27,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 //   'water melon'
 // ]
 root.render(
-    <FormValidation />
+    <App />
 );
 
 // If you want to start measuring performance in your app, pass a function
