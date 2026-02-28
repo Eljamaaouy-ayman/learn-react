@@ -14,8 +14,9 @@ import reportWebVitals from './reportWebVitals';
 // import ProductList from './tps/store/productList';
 // import Page from './LanguageSwitcher/Page';
 // import FormValidationBeginner from './tps/FormValidation/FormValidationBeginner';
-import FormValidation from './tps/FormValidation/FormValidation';
-import App from './Router/App';
+import CarList from './Car/CarList'
+// import FormValidation from './tps/FormValidation/FormValidation';
+// import App from './Router/App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // const fruitsArray = [
@@ -27,7 +28,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 //   'water melon'
 // ]
 root.render(
-    <App />
+    <CarList />
 );
 
 // If you want to start measuring performance in your app, pass a function

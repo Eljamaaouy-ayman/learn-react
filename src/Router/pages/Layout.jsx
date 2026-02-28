@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link, Outlet } from 'react-router-dom'
+import { DarkModeContext } from '../App'
 
 export default function Layout() {
+    const darkMode = useContext(DarkModeContext)
   return (
     <>
         <nav className='bg-primary'>
@@ -17,7 +19,7 @@ export default function Layout() {
                 </li>
             </ul>
         </nav>
-        <div className="container-fluid w-75 mx-auto">
+        <div className={darkMode.isDarkMode ? "container-fluid w-75 mx-auto" : "bg-black"}>
             <Outlet></Outlet>
         </div>
     </>
