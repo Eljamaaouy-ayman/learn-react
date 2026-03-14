@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useReducer, useRef, useState } from "react"
+import {formReducer, initial_values} from "./formReducer"
 
 export default function Form (){
 
@@ -8,6 +9,7 @@ export default function Form (){
     const inputCountryRef = useRef()
     const inputAcceptRef = useRef()
 
+    // const [formValues, dispatch] = useReducer(formReducer, initial_values)
     const [formValues, setFormValues] = useState({
         name:'',
         city:'',
@@ -42,31 +44,31 @@ export default function Form (){
         inputDateRef.current.value = new Date().toISOString().substring(0, 10)
     })
 
-    // const handleChange = (e) => {
-    //     const currentTarget = e.currentTarget
-    //     const id = currentTarget.id
-    //     let value = undefined
-    //     console.log(currentTarget.type)
-    //     switch(currentTarget.type){
-    //         case 'text' :
-    //             value = currentTarget.value
-    //             break
-    //         case 'checkbox' :
-    //             value = currentTarget.checked
-    //             break
-    //         case 'select-one' :
-    //             value = currentTarget.value
-    //             break
-    //         default :
-    //             console.error('unvalid type')
-    //     }
+    const handleChange = (e) => {
+        const currentTarget = e.currentTarget
+        const id = currentTarget.id
+        let value = undefined
+        console.log(currentTarget.type)
+        switch(currentTarget.type){
+            case 'text' :
+                value = currentTarget.value
+                break
+            case 'checkbox' :
+                value = currentTarget.checked
+                break
+            case 'select-one' :
+                value = currentTarget.value
+                break
+            default :
+                console.error('unvalid type')
+        }
 
-    //     setFormValues(prevState => {
-    //         console.log(prevState)
-    //         return {...prevState, ...{[id]: value}}
-    //     })
-    //     console.log(formValues)
-    // }
+        setFormValues(prevState => {
+            console.log(prevState)
+            return {...prevState, ...{[id]: value}}
+        })
+        console.log(formValues)
+    }
 
 
     return <div className={"container my-4"}>
