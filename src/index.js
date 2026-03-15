@@ -14,11 +14,15 @@ import Form from './Formss/Form';
 import ProductList from './tps/store/productList';
 // import Page from './LanguageSwitcher/Page';
 // import FormValidationBeginner from './tps/FormValidation/FormValidationBeginner';
-import CarList from './Car/CarList'
-import Maths from './UseMemo/Maths';
-import UsersApp from './tps/Users/UsersApp';
+// import CarList from './Car/CarList'
+// import Maths from './UseMemo/Maths';
+// import UsersApp from './tps/Users/UsersApp';
 // import FormValidation from './tps/FormValidation/FormValidation';
 // import App from './Router/App';
+import Counter from './Redux/Reducers/Counter';
+import CounterStore from './Redux/Reducers/Counter';
+import { Provider } from 'react-redux';
+import store from './Redux/store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // const fruitsArray = [
@@ -30,7 +34,13 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 //   'water melon'
 // ]
 root.render(
-    <UsersApp />
+    <>
+    <Provider store={store}>
+        <div className='container justify-content-center align-items-center d-flex'>
+            <CounterStore></CounterStore>
+        </div>
+    </Provider>
+    </>
 );
 
 // If you want to start measuring performance in your app, pass a function
