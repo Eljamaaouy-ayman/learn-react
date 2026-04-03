@@ -23,6 +23,8 @@ import Counter from './Redux/Reducers/Counter';
 import CounterStore from './Redux/Reducers/Counter';
 import { Provider } from 'react-redux';
 import store from './Redux/store';
+import App from './Redux-toolkit/app';
+import Anima from './animation/anima';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // const fruitsArray = [
@@ -35,11 +37,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // ]
 root.render(
     <>
-    <Provider store={store}>
-        <div className='container justify-content-center align-items-center d-flex'>
-            <CounterStore></CounterStore>
-        </div>
-    </Provider>
+        <Anima></Anima>
     </>
 );
 
