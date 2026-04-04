@@ -9,9 +9,9 @@ import reportWebVitals from './reportWebVitals';
 // import Fruit from './fruits/fruit';
 // import Counter from './counter/counter';
 // import Event from './events/event';
-import Form from './Formss/Form';
+// import Form from './Formss/Form';
 // import Toggle from './toggle/toggleName';
-import ProductList from './tps/store/productList';
+// import ProductList from './tps/store/productList';
 // import Page from './LanguageSwitcher/Page';
 // import FormValidationBeginner from './tps/FormValidation/FormValidationBeginner';
 // import CarList from './Car/CarList'
@@ -19,12 +19,13 @@ import ProductList from './tps/store/productList';
 // import UsersApp from './tps/Users/UsersApp';
 // import FormValidation from './tps/FormValidation/FormValidation';
 // import App from './Router/App';
-import Counter from './Redux/Reducers/Counter';
-import CounterStore from './Redux/Reducers/Counter';
-import { Provider } from 'react-redux';
-import store from './Redux/store';
-import App from './Redux-toolkit/app';
-import Anima from './animation/anima';
+// import Counter from './Redux/Reducers/Counter';
+// import CounterStore from './Redux/Reducers/Counter';
+// import { Provider } from 'react-redux';
+// import store from './Redux/store';
+// import App from './Redux-toolkit/app';
+// import Anima from './animation/anima';
+import User from './PropTypes/User';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // const fruitsArray = [
@@ -37,7 +38,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // ]
 root.render(
     <>
-        <Anima></Anima>
+        <User fullName={'ayman eljamaaouy'} jobTitle={'web designer'} age={23} isAdult={true} diplomes={['est Sidi bennour', '1337 UM6P benguerir']}></User>
     </>
 );
 
